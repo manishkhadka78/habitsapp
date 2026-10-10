@@ -1,26 +1,32 @@
-# Habit & Home: e-commerce storefront
+# Austral Labs: research peptide storefront
 
-A small, dependency-free online store built with plain HTML, CSS and JavaScript.
+A dependency-free e-commerce storefront (plain HTML, CSS and JavaScript) styled
+after Australian research-peptide suppliers: a clinical navy/blue look, purity and
+COA badges, mg size variants, AUD pricing with GST included, and research-use-only messaging.
+
+"Austral Labs" is a **placeholder brand**. Change it in `js/products.js` (`STORE.name`)
+and the page title in `index.html`.
 
 ## Features
 
-- **Product catalog** with category filters, live search and sorting (price, rating, name)
-- **Product pages** with stock status, quantity picker and related products
-- **Shopping cart** with quantity controls, saved in `localStorage` and synced across tabs
-- **Pricing**: subtotal, 8% tax, and $5.99 shipping (free over $50)
-- **Checkout form** with validation (email, Luhn card check, expiry, CVC)
-- **Order confirmation** page; orders are saved locally
-- Responsive layout and automatic dark mode
+- **Home page**: announcement bar, hero, trust strip, categories, best sellers,
+  lab-testing / sample COA section, how ordering works, and an FAQ
+- **Research-use-only gate** on first visit (18+ and research confirmation)
+- **Shop**: category filters, live search, sorting
+- **Product pages**: size variants with per-size price and stock, purity badge, spec table
+- **Cart**: per-variant lines, quantity controls, free-shipping progress bar, GST shown;
+  saved in `localStorage` and synced across tabs
+- **Checkout**: AU address (state + 4-digit postcode), AU mobile validation, Standard/Express
+  shipping, card **or** PayID/bank transfer, and a required RUO acknowledgement
+- **Order confirmation**, with payment instructions for bank transfer orders
+- Responsive, with automatic dark mode
 
-> This is a front-end demo: **no real payments are processed**. Use test card `4242 4242 4242 4242`.
+> Front-end demo only: **no real payments are processed**. Test card: `4242 4242 4242 4242`.
 
 ## Run it
 
-No build step. Serve the folder with any static server:
-
 ```bash
 python3 -m http.server 8000
-# or: npx serve .
 ```
 
 Then open http://localhost:8000.
@@ -28,21 +34,27 @@ Then open http://localhost:8000.
 ## Project structure
 
 ```
-index.html        Page shell (header, footer, app mount point)
-css/styles.css    All styles
-js/products.js    Product catalog data, edit this to change products
-js/app.js         Router, cart, checkout and views
+index.html        Page shell: announcement bar, header, footer, RUO gate
+css/styles.css    All styles (colour tokens at the top)
+js/products.js    Store settings (name, shipping, GST) and the product catalog
+js/app.js         Router, cart, checkout and all views
 ```
 
 ## Editing products
 
-Add or change entries in `js/products.js`. Each product has an `id`, `name`,
-`category`, `price`, `emoji`, `color` (thumbnail background), `rating`, `stock`
-and `description`. To use real photos, add an `image` URL and render it in the
-`thumb()` helper in `js/app.js`.
+Each product in `js/products.js` has an `id`, `name`, optional short vial `label`, `category`,
+`cap` (vial cap colour), `purity`, `rating`/`reviews`, `bestseller`, `description`, and
+`variants` (each with its own `size`, `price` and `stock`).
 
-## Next steps for production
+The ratings, review counts, purity figures and sample COA are **placeholder data**.
+Replace them with your real figures and your lab's real certificates before going live.
 
-- Move products and orders to a backend (e.g. Node/Express + a database)
-- Take payments through a provider such as Stripe Checkout, never handle raw card numbers
-- Add user accounts, order history and an admin panel for inventory
+## Before going live
+
+- Replace placeholder bank/PayID details, the support email and the sample data
+- Move products, stock and orders to a backend, and take card payments through a
+  payment provider rather than handling card numbers yourself. Many card processors
+  restrict research-chemical merchants, so check their terms first
+- Get advice on the regulations for your products. In Australia, many peptides are
+  prescription-only medicines under the TGA's Poisons Standard, and a
+  "research use only" label does not by itself make retail supply lawful
