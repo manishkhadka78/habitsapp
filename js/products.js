@@ -1,0 +1,27 @@
+// Product catalog. Replace with an API call when a backend is added.
+window.PRODUCTS = [
+  { id: "p1",  name: "Morning Ritual Journal", category: "Stationery", price: 18.0,  emoji: "📓", color: "#f4d9c6", rating: 4.8, stock: 42,
+    description: "A 90-day guided journal with daily prompts for intentions, gratitude and reflection." },
+  { id: "p2",  name: "Habit Tracker Wall Calendar", category: "Stationery", price: 22.0, emoji: "🗓️", color: "#d9e6f5", rating: 4.6, stock: 30,
+    description: "A full-year grid calendar for tracking up to 8 habits at a glance. Printed on recycled paper." },
+  { id: "p3",  name: "Insulated Water Bottle", category: "Wellness", price: 29.0, emoji: "💧", color: "#cfeae5", rating: 4.9, stock: 75,
+    description: "Keeps drinks cold for 24 hours. Time markers on the side help you hit your daily water goal." },
+  { id: "p4",  name: "Cork Yoga Mat", category: "Fitness", price: 64.0, emoji: "🧘", color: "#ead7c0", rating: 4.7, stock: 12,
+    description: "A naturally grippy, sustainably harvested cork mat. 5 mm thick for joint support." },
+  { id: "p5",  name: "Resistance Band Set", category: "Fitness", price: 24.0, emoji: "💪", color: "#f5d0d6", rating: 4.5, stock: 58,
+    description: "Five bands, from light to extra-heavy, with a carry pouch. Strength training anywhere." },
+  { id: "p6",  name: "Sunrise Alarm Clock", category: "Sleep", price: 49.0, emoji: "🌅", color: "#fbe3b8", rating: 4.4, stock: 20,
+    description: "Wakes you gently with light that brightens over 30 minutes, plus soft nature sounds." },
+  { id: "p7",  name: "Silk Sleep Mask", category: "Sleep", price: 19.0, emoji: "😴", color: "#e3d9f2", rating: 4.6, stock: 64,
+    description: "Mulberry silk mask that blocks light without pressing on your eyes." },
+  { id: "p8",  name: "Loose-Leaf Herbal Tea Sampler", category: "Wellness", price: 26.0, emoji: "🍵", color: "#dcecc9", rating: 4.8, stock: 40,
+    description: "Six caffeine-free blends to help you unwind in the evening. 15 cups each." },
+  { id: "p9",  name: "Focus Timer Cube", category: "Productivity", price: 21.0, emoji: "⏱️", color: "#d6e2f0", rating: 4.3, stock: 33,
+    description: "Flip to start a 5, 15, 30 or 60-minute timer. No phone required." },
+  { id: "p10", name: "Phone Lockbox", category: "Productivity", price: 34.0, emoji: "📵", color: "#e6e1d8", rating: 4.2, stock: 0,
+    description: "A timed lockbox for your phone. Reclaim your evenings and mornings." },
+  { id: "p11", name: "Bamboo Desk Organizer", category: "Productivity", price: 39.0, emoji: "🗂️", color: "#efe2c9", rating: 4.5, stock: 18,
+    description: "Five compartments for keeping your workspace clear and your mind clearer." },
+  { id: "p12", name: "Weighted Jump Rope", category: "Fitness", price: 17.0, emoji: "🪢", color: "#f2d4c4", rating: 4.4, stock: 47,
+    description: "Ball-bearing handles and a weighted cord for a smooth, quick cardio session." }
+];
